@@ -1,5 +1,12 @@
-#correlation analysis
+#statistics description
+import numpy as np
 from scipy import stats
 
-def check_correlation(x, y):
-    return stats.pearsonr(x, y)
+def analyze_dataset(data):
+    return {
+        'mean': np.mean(data),
+        'median': np.median(data),
+        'std': np.std(data),
+        'skewness': stats.skew(data)
+    }
+
